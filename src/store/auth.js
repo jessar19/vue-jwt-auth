@@ -38,11 +38,11 @@ export default {
     async attempt({ commit }, token) {
         commit ('SET_TOKEN', token);
         try {
-            let response = await axios.get('api/values', {
+            let response = await axios.get('api/values'/*, {
                 headers : {
                     'Authorization' : `Bearer ${token}`
                 }
-            });
+            }*/);
             commit('SET_USER', response.data);
         } catch  (e) {
             //if token expire
