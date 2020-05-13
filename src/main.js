@@ -9,8 +9,11 @@ require('@/store/subscriber');
 axios.defaults.baseURL='http://localhost:54599/'
 Vue.config.productionTip = false
 
-new Vue({
-  router,
-  store,
-  render: h => h(App)
-}).$mount('#app')
+store.dispatch('auth/attempt',localStorage.getItem('token')).then(() => {
+    new Vue({
+        router,
+        store,
+        render: h => h(App)
+      }).$mount('#app')
+});
+
