@@ -1,14 +1,14 @@
 <template>
   <div id="app">
-      <TheNavegation/>
+      <TheNavigation/>
     <router-view/>
   </div>
 </template>
 <script>
-import TheNavegation from '@/components/TheNavegation'
+import TheNavigation from '@/components/TheNavigation'
 export default {
     components : {
-        TheNavegation
+        TheNavigation
     }
 }
 </script>
